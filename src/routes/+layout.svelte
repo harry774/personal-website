@@ -1,5 +1,5 @@
 <script>
-  let { children } = $props();
+let { children } = $props();
   import "../app.css";
   import Footer from "../components/Footer.svelte";
   import Header from "../components/Header.svelte";
@@ -20,8 +20,8 @@
     </button>
   </div>
   <Header y={y}/>
+  {@render children()}
   <Footer/>
 
 </div>
 <svelte:window bind:scrollY={y} bind:innerHeight bind:innerWidth />
-{@render children()}
